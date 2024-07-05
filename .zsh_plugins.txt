@@ -1,0 +1,20 @@
+QuarticCat/zsh-smartcache # caches evals for faster loading
+
+zsh-users/zsh-completions kind:fpath path:src # community completions
+
+zchee/zsh-completions kind:fpath path:src # more completions
+
+belak/zsh-utils path:completion # init completions
+
+wehlando/efibootmgr-zsh-completion kind:fpath
+
+Aloxaf/fzf-tab # tab completions with fzf
+
+zsh-users/zsh-syntax-highlighting
+
+zsh-users/zsh-autosuggestions kind:defer # fish-like autosuggestions
+
+romkatv/zsh-defer # defer loading of zsh stuff
+
+z-shell/zsh-zoxide
+

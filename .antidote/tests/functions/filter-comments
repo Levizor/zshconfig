@@ -1,0 +1,2 @@
+#!/bin/zsh
+awk '/^A/{next};1'
