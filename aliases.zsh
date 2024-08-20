@@ -2,13 +2,16 @@ compress(){
 	ffmpeg -i $1 -c:v libx265 $2
 }
 
+
 alias mirrors="sudo reflector --verbose --latest 10 --country 'Poland' --age 6 --sort rate --save /etc/pacman.d/mirrorlist"
 
 alias hypr="nvim ~/.config/hypr/hyprland.conf"
 
 alias binds="nvim ~/.config/hypr/binds.conf"
 
-alias aliases="nvim ~/.aliases.zsh"
+alias aliases="nvim ${ZDOTDIR}/aliases.zsh"
+
+alias zrc="nvim ${ZDOTDIR}.zshrc"
 
 alias cp="cp -r"
 
@@ -27,3 +30,5 @@ alias la="lsd -a --group-directories-first"
 alias ll="lsd -al --group-directories-first"
 
 alias cmatrix="cmatrix -C black"
+
+alias htheme="nvim ~/.config/hypr/hyprtheme.conf"

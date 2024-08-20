@@ -1,0 +1,41 @@
+_ZO_CMD_PREFIX="cd"
+
+#sourcing
+source /home/levizor/zsh_config/.antidote/antidote.zsh
+antidote load
+source /home/levizor/zsh_config/aliases.zsh
+
+#binding
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+
+plugins=(zoxide autojump git adb aliases alias-finder 
+          archlinux cp web-search zsh-autosuggestions 
+          zsh-history-substring-search zsh-syntax-highlighting
+        fzf-tab zsh-vi-mode)
+
+
+
+setopt completealiases
+setopt extended_glob
+
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:*' switch-group '<' '>'
+
+eval "$(oh-my-posh init zsh --config '~/.config/oh-my-posh/config.toml')"
+
+#history
+setopt SHARE_HISTORY
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/zsh_config/.zsh_history
+
+#exporting
+export PATH="$PATH:/home/levizor/.local/bin"
+
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export LS_COLORS=$(vivid generate rose-pine-moon)
+export BAT_THEME="base16-256"
+
